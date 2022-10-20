@@ -14,6 +14,8 @@
         rel="stylesheet">
     <!-- slick  -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- style  -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -126,12 +128,15 @@
                     </div>
 
                     <!-- <h1 class="main-heading">Are you having any one or more problems in printing your documents?</h1> -->
-                    <h1 class="main-heading">Siliguri's First Online <br> Printing Store</h1>
+                    <h1 class="main-heading" data-aos="fade-left" data-aos-delay="500">Siliguri's First Online <br> Printing Store</h1>
                     <p class="para mb-3">Get Best Quality Documents Printing and Binding Service Online at Siliguri</p>
 
                     <div class="main-ctax mt-3">
                         <a href="#" class="btn main-cta">Print Now</a>
-                        <a href="#" class="btn main-cta ms-3">Download App <i class="bi bi-google-play"></i></a>
+                        <!-- <a href="#" class="btn main-cta ms-3">Download App <i class="bi bi-google-play"></i></a> -->
+                        <a href="#" class="btn ms-3">
+                            <img src="assets/img/icons/google-play-store.png" alt="Download app" width="200">
+                        </a>
                     </div>
                 </div>
                 <!-- <div class="header-right"></div> -->
@@ -142,11 +147,50 @@
     </div>
 
     <main class="mb-5">
+
+        <!-- about us  -->
+        <div class="row mb-5">
+            <div class="col-md-11 col-12 mx-auto">
+                <!-- about us  -->
+                <div class="row mb-5">
+                    <div class="col-md-6 col-12">
+                        <img src="assets/img/bw2.jpg" alt="about us" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 col-12 center align-items-start" >
+                        <div class="upper-titlee mb-3">
+                            <p class="m-0">About Us</p>
+                        </div>
+                        <h3 class="subHeading" data-aos="fade-up">More About OurSelf</h3>
+                        <p class="para" data-aos="fade-up" data-aos-delay="200">
+                            <strong>Print Your Docs</strong> is an online printing platform. Siliguri's frist online
+                            Printing Store. We got you covered with all your printing needs.
+                            Select from our comprehensive list of printing options for your B&W and color copies which
+                            best describe your finished product:
+                        </p>
+                        <div class="featureList">
+                            <ul class="list-unstyled m-0 p-0">
+                                <li><i class="bi bi-arrow-right-short"></i> Printed in full-color</li>
+                                <li><i class="bi bi-arrow-right-short"></i> Variety of paper sizes</li>
+                            </ul>
+                            <ul class="list-unstyled m-0 p-0 ms-5">
+                                <li><i class="bi bi-arrow-right-short"></i> Double-sided</li>
+                                <li><i class="bi bi-arrow-right-short"></i> Optional finishing</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="row mb-5">
             <div class="col-md-11 col-12 mx-auto">
                 <!-- how it works  -->
                 <div class="how-it-works-sec">
-                    <h2 class="text-center subHeading">How Does it Works</h2>
+                    <h2 class="text-center subHeading" data-aos="fade-up">How Does it Works</h2>
                     <p class="para class text-center">There are only Three simple step to Get our Service</p>
                     <div class="row">
                         <div class="col-md-3 col-12 mx-auto center step-item">
@@ -172,10 +216,8 @@
             <div class="row p-0">
                 <div class="col-md-4 col-12 serviceDetails ps-5 p-4 center">
 
-                    <h2 class="subHeading mb-3">Services</h2>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, incidunt laboriosam!
-                        Totam maiores repellendus placeat explicabo sapiente impedit excepturi amet numquam id, eligendi
-                        et fugit enim ipsa dolores voluptas ea!</p>
+                    <h2 class="subHeading mb-3" data-aos="fade-up">Services</h2>
+                    <p class="para" data-aos="fade-up" data-aos-delay="200">We are Online Printing Service Where you users upload the files they need to print and tell us page type, starting and ending page, no of copies then we deliver them them files  after printing to their door step within Next Day. Share your file to print via WhatsApp, Website & Mobile App.</p>
                 </div>
 
                 <div class="col-md-8 col-12 m-0 p-0">
@@ -212,7 +254,7 @@
                     <div class="upper-titlee mb-3 mx-auto">
                         <p class="m-0">Our Plan</p>
                     </div>
-                    <h2 class="text-center subHeading" id="pricing">Pricing</h2>
+                    <h2 class="text-center subHeading" id="pricing" data-aos="fade-up">Pricing</h2>
                     <p class="para class text-center">Most Cost Effective Printing Service. Look, which is the Best Plan
                         For You</p>
 
@@ -253,7 +295,7 @@
         <div class="row mb-5">
             <div class="col-md-11 col-12 mx-auto">
                 <!-- about us  -->
-                <div class="row mb-5">
+                <!-- <div class="row mb-5">
                     <div class="col-md-6 col-12">
                         <img src="assets/img/bw2.jpg" alt="about us" class="img-fluid">
                     </div>
@@ -280,15 +322,15 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
                 <!-- reviews  -->
-                <div class="container-fluid m-0 p-0">
+                <div class="container-fluid m-0 p-0 mb-5">
                     <div class="upper-titlee mb-3 mx-auto">
                         <p class="m-0">Testimonials</p>
                     </div>
 
-                    <h4 class="subHeading text-center">What Our Customers Say</h4>
+                    <h4 class="subHeading text-center" data-aos="fade-up">What Our Customers Say</h4>
 
                     <div class="testimonialList p-3">
                         <div class="testimonialItem">
@@ -312,10 +354,79 @@
 
                 </div>
 
+                <!-- faq  -->
+                <div class="container-fluid m-0 p-0 mb-5">
+                    <div class="upper-titlee mb-3 mx-auto">
+                        <p class="m-0">frequently asked questions</p>
+                    </div>
+
+                    <h4 class="subHeading text-center" data-aos="fade-up">have any questions ?</h4>
+                    <div class="container px-4 py-3">
+
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Do you provide your services outside Siliguri?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Currently the service is available in Siliguri with free delivery but If anyone
+                                        orders from outside Siliguri has to pay the <strong> delivery charges .</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I share my documents to print? ?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        You can share the file through our website and app by clicking the print button
+                                        or you can also share on WhatsApp and get the printed documents delivered to
+                                        your home.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How long will it take to deliver?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        We delivered your the printed documents within the Next Day. If want fast
+                                        deliver you can contact us at <a href="+919474350014">94743 50014</a>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
 
+
+
+
     </main>
+
+
 
 
     <footer class="py-5 bg-light">
@@ -374,16 +485,16 @@
                             </li>
                             <li class="d-flex mb-2">
                                 <i class="bi bi-telephone-fill"></i>
-                                <a href="#">+91 984563213</a>
+                                <a href="+919474350014">94743 50014</a>
                             </li>
                             <li class="d-flex">
                                 <i class="bi bi-envelope-fill"></i>
-                                 <a href="mailto:admin@domain.com">admin@domain.com</a>
+                                <a href="mailto:admin@domain.com">admin@domain.com</a>
                             </li>
                         </ul>
 
                     </div>
-                    
+
 
                     <div class="col-md-3">
                         <!-- Heading -->
@@ -400,13 +511,13 @@
 
                         <!-- Text -->
                         <div class="mb-3 d-flex">
-                            <a href="#" class="socialIcon center me-3">
+                            <a href="https://facebook.com/printyourdocs.in" target="_blank" class="socialIcon center me-3">
                                 <i class="bi bi-facebook"></i>
                             </a>
-                            <a href="#" class="socialIcon center me-3">
+                            <a href="https://Instagram.com/printyourdocs.in" target="_blank" class="socialIcon center me-3">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a href="#" class="socialIcon center">
+                            <a href="https://wa.me/+9474350014" target="_blank" class="socialIcon center">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
                         </div>
@@ -418,7 +529,8 @@
 
                         <!-- Copyright -->
                         <div class="d-flex align-items-center">
-                            <p class="hr-sm me-3" style="height: 1px;">Print Your Docs © 2022. All rights reserved. made by  <a href="#">Subhankar Sarkar</a> </p>
+                            <p class="hr-sm me-3" style="height: 1px;">Print Your Docs © 2022. All rights reserved. made
+                                by <a href="#">Subhankar Sarkar</a> </p>
                         </div>
 
                     </div>
@@ -428,12 +540,20 @@
     </footer>
 
 
+    <div class="whatsapp center">
+        <a href="https://wa.me/+9474350014" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-
+        AOS.init({
+            // delay: 1000, 
+        });
         $(document).ready(function () {
             $('.testimonialList').slick({
                 infinite: true,

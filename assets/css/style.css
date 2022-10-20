@@ -7,6 +7,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 :root{
@@ -273,4 +274,21 @@ body{
 .footerItem{
     color: #000;
     text-decoration: none;
+}
+
+/* whatsapp cta */
+
+.whatsapp {
+    background-color: #25D366;
+    position: sticky;
+    left: 5%;
+    bottom:7%;
+    z-index: 99;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
+.whatsapp i{
+   font-size: 2.5rem;
+   color: #fff;
 }
