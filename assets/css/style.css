@@ -1,44 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-:root{
+:root {
     --font-outfit: 'Outfit', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
-    --primary-green : #5DAD03;
+    --primary-green: #5DAD03;
     --primary-blue: #011F68;
     --secondary-blue: #4262ff;
-    --text-gray: rgb(129,126,126);
+    --text-gray: rgb(129, 126, 126);
     --secondary-dark: #15212c;
 }
 
-.logo{
+.logo {
     width: 105px;
 }
-.row{
+
+.row {
     margin: 0;
 }
 
 /* components */
-.para{
+.para {
     color: var(--text-gray);
     font-weight: 400;
 }
-.center{
+
+.center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.subHeading{
+
+.subHeading {
     font-size: 2.5rem;
     font-weight: 500;
     font-family: var(--font-outfit);
@@ -48,33 +53,49 @@ body{
 
 /* components */
 
-.main-header{
-    /* border: 2px solid black; */
+.top-nav{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 999;
+}
+
+.main-header {
     height: 100vh;
     width: 100%;
     margin-bottom: 5rem;
-   background-image: url('../img/bg.png');
-   background-repeat: no-repeat;
-   background-position: right;
-   background-size: contain;
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
 }
-.hero{
+
+.hero {
     height: 80vh;
     display: flex;
 }
 
-.header-left{
+.header-left {
     width: 60%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.header-right{
+
+.header-right {
     width: 35%;
 }
 
-.main-heading{
+.main-heading {
     font-size: 3.3rem;
     font-family: var(--font-outfit);
     font-weight: 500;
@@ -83,7 +104,7 @@ body{
 
 
 
-.main-cta{
+.main-cta {
     padding: 18px 35px 15px;
     text-align: center;
     font-weight: 500;
@@ -92,7 +113,7 @@ body{
     text-decoration: none;
 }
 
-.upper-titlee{
+.upper-titlee {
     background-color: var(--primary-green);
     width: max-content;
     padding: 5px 15px;
@@ -110,14 +131,15 @@ body{
 /* .step-item{
     border: 2px solid black;
 } */
-.step-item img{
+.step-item img {
     width: 55%;
     object-fit: cover;
     /* border: 1.5px solid var(--primary-blue);
     border-radius: 50%; */
     /* background-color: #5DAD03; */
 }
-.step-item p{
+
+.step-item p {
     width: 85%;
 }
 
@@ -126,80 +148,89 @@ body{
 /* .serviceSec{
     border: 2px solid red;
 } */
-.serviceDetails{
+.serviceDetails {
     background-color: var(--secondary-dark);
     color: var(--text-gray);
     height: 65vh;
     align-items: flex-start;
 }
-.serviceDetails h2{
+
+.serviceDetails h2 {
     background-color: var(--secondary-dark);
     color: #fff;
-    
+
 }
 
-.serviceItem{ 
+.serviceItem {
     position: relative;
     overflow: hidden;
 }
-.serviceItem img{
+
+.serviceItem img {
     width: 100%;
     height: 65vh;
     object-fit: cover;
     transition: all ease-in .2s;
-    
-}
-.serviceItem:hover{
-   cursor: pointer;
-}
-.serviceItem:hover img{
-   transform: scale(1.12);
+
 }
 
-.serviceItemDetails{
+.serviceItem:hover {
+    cursor: pointer;
+}
+
+.serviceItem:hover img {
+    transform: scale(1.12);
+}
+
+.serviceItemDetails {
     background-color: #d4d4d4e3;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
 }
-.serviceItemTitle{
+
+.serviceItemTitle {
     font-weight: 600;
     font-size: 1.3rem;
 }
 
-.serviceItem-info{
+.serviceItem-info {
     color: var(--secondary-dark);
 }
 
-.srvcItem-border{
+.srvcItem-border {
     border-left: 0.8px solid #fff;
 }
 
-.pricingContent{
+.pricingContent {
     width: 65%;
     /* border: 2px solid rebeccapurple; */
 }
-.priceTitleList{
+
+.priceTitleList {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #eceef9;
 }
-.priceTitleList li{
- 
+
+.priceTitleList li {
+
     text-transform: capitalize;
     font-weight: 500;
     font-size: 1.2rem;
     font-family: var(--font-outfit);
 }
-.priceListItem{
+
+.priceListItem {
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* border: 2px solid black; */
 }
-.priceListItem li{
+
+.priceListItem li {
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
@@ -207,45 +238,48 @@ body{
     width: 33.3%;
     text-align: center;
 }
-.priceListItem li i{
+
+.priceListItem li i {
     color: rgb(14 171 124);
     font-size: 1.15rem;
 }
 
-.featureList{
+.featureList {
     /* border: 2px solid red; */
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
 }
 
-.featureList ul li{
+.featureList ul li {
     display: flex;
     align-items: center;
 }
-.featureList ul li i{
+
+.featureList ul li i {
     color: var(--secondary-blue);
     font-weight: 600;
     font-size: 1.3rem;
 }
 
-.testimonialList{
+.testimonialList {
     width: 60%;
     margin: 0 auto;
 }
 
-.bi-quote{
+.bi-quote {
     font-size: 3rem;
     color: #f24f56;
 }
 
-.testimonialItem{
+.testimonialItem {
     /* border: 2px solid red; */
     text-align: center;
     color: var(--text-gray);
-    
+
 }
-.testimonialAuthor{
+
+.testimonialAuthor {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--secondary-dark);
@@ -253,25 +287,28 @@ body{
 
 
 /* footer  */
-.footer-logo{
+.footer-logo {
     width: 150px;
 }
-.socialIcon{
+
+.socialIcon {
     background-color: #edf1f5;
     width: 50px;
     height: 50px;
     border-radius: 95px;
     color: #434a57;
 }
-.socialIcon i{
+
+.socialIcon i {
     font-size: 1.8rem;
 }
-.socialIcon:hover{
+
+.socialIcon:hover {
     background-color: var(--secondary-blue);
     color: #fff;
 }
 
-.footerItem{
+.footerItem {
     color: #000;
     text-decoration: none;
 }
@@ -282,13 +319,14 @@ body{
     background-color: #25D366;
     position: sticky;
     left: 5%;
-    bottom:7%;
+    bottom: 7%;
     z-index: 99;
     height: 55px;
     width: 55px;
     border-radius: 50%;
 }
-.whatsapp i{
-   font-size: 2.5rem;
-   color: #fff;
+
+.whatsapp i {
+    font-size: 2.5rem;
+    color: #fff;
 }
