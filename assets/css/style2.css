@@ -1,0 +1,19 @@
+.hero{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('../img/bg.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero-content{
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-3{
+    background-image: url('../img/bg3.png');
+}

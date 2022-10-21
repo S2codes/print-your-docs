@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    // preloader 
+    window.onload = function () {
+        document.getElementById('preloader').style.display = "none";
+    }
+
     // sticky Nav 
     console.log('qry');
     $(window).scroll(function () {
