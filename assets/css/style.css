@@ -76,7 +76,7 @@ body {
 }
 
 .sticky{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -163,9 +163,15 @@ body {
     border: 2px solid red;
 } */
 
+/* #step-List{
+    display: flex;
+    border: 2px solid red;
+} */
 
 /* .step-item{
     border: 2px solid black;
+    width: 33.3%;
+    background-color: #edf1f5;
 } */
 .step-item img {
     width: 55%;
@@ -368,11 +374,19 @@ body {
 }
 
 @media screen and (max-width : 800px) {
+
+    .topbarList{
+        flex-direction: column;
+    }
+    .index-link{
+        margin-left: 1.5rem;
+    }
     .hero{
         height: auto;
     }
     .hero-content{
         padding: 7px;
+        height: 70vh;
     }
     .aboutus-content{
         margin-top: 2rem;
@@ -400,6 +414,22 @@ body {
     .serviceItem{
         width: 100%;
     }
+
+    .featureList{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .featureList-2{
+        margin: 0!important;
+    }
+    .form-content{
+        margin-top: 2rem;
+    }
+    
+
+
+
+
 
 
 }

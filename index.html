@@ -23,6 +23,8 @@
 </head>
 
 <body>
+
+    <!-- preloader  -->
     <div id="preloader" class="center">
         <img src="assets/img/icons/loader.gif" alt="preloader">
     </div>
@@ -31,7 +33,7 @@
     <div class="container-fluid p-2 bg-dark">
         <div class="row">
             <div class="col-md-11 col-12 mx-auto">
-                <ul class="list-unstyled m-0 p-0 d-flex justify-content-between">
+                <ul class="list-unstyled m-0 p-0 d-flex justify-content-between topbarList">
                     <li class="text-light"><i class="bi bi-whatsapp"></i> <a href="https://+919474350014"
                             class="top-nav">+91 94743
                             50014</a>
@@ -44,6 +46,8 @@
         </div>
 
     </div>
+
+
 
     <div class="hero ">
 
@@ -64,7 +68,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    <a class="nav-link active index-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link ms-4" href="about.html">About</a>
@@ -79,7 +83,7 @@
                                     <a class="nav-link ms-4" href="contact.html">Contact</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link ms-4 btn btn-primary" href="contact.html">Print Now</a>
+                                    <a class="nav-link ms-4 btn btn-primary" href="print.html">Print Now</a>
                                 </li>
 
 
@@ -87,22 +91,33 @@
                         </div>
                     </div>
                 </nav>
+
             </div>
         </div>
 
-        <!-- hero content -->
-        <div class="hero-content center">
-            <h1 class="main-heading text-center" data-aos="fade-up" data-aos-delay="500">Online Delivery of Your Daily
-                Printing Needs</h1>
-            <p class="para mb-3 text-center">First time in Siliguri, online printing & delivery of your school, college
-                projects, assignments, <br> official documents very next day with FREE Delivery</p>
 
-            <div class="main-ctax mt-3">
-                <a href="#" class="btn main-cta" style="background-color:#12c5ff;">Print Now </a>
-            </div>
+        <div class="row" id="navbar">
+            <div class="col-md-11 col-12 mx-auto">
+                <!-- hero content -->
+                <div class="hero-content center">
+                    <h1 class="main-heading text-center" data-aos="fade-up" data-aos-delay="500">Online Delivery of Your
+                        Daily
+                        Printing Needs</h1>
+                    <p class="para mb-3 text-center">First time in Siliguri, online printing & delivery of your school,
+                        college
+                        projects, assignments, <br> official documents very next day with FREE Delivery</p>
+
+                    <div class="main-ctax mt-3">
+                        <a href="print.html" class="btn main-cta" style="background-color:#12c5ff;">Print Now </a>
+                    </div>
+                </div>
+             </div>
         </div>
 
     </div>
+
+
+
 
 
 
@@ -133,7 +148,7 @@
                                 <li><i class="bi bi-arrow-right-short"></i> Printed in full-color</li>
                                 <li><i class="bi bi-arrow-right-short"></i> Variety of paper sizes</li>
                             </ul>
-                            <ul class="list-unstyled m-0 p-0 ms-5">
+                            <ul class="list-unstyled m-0 p-0 ms-5 featureList-2">
                                 <li><i class="bi bi-arrow-right-short"></i> Double-sided</li>
                                 <li><i class="bi bi-arrow-right-short"></i> Optional finishing</li>
                             </ul>
@@ -143,8 +158,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <div class="row mb-5">
@@ -384,12 +397,7 @@
             </div>
         </div>
 
-
-
-
     </main>
-
-
 
 
     <footer class="pt-4 bg-light">
@@ -517,9 +525,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        AOS.init({
-            // delay: 1000, 
-        });
+        AOS.init();
         $(document).ready(function () {
             $('.testimonialList').slick({
                 infinite: true,
@@ -528,51 +534,6 @@
                 autoplaySpeed: 2000,
                 arrows: false
             });
-
-            // $('#step-List').slick({
-            //     // infinite: true,
-            //     // speed: 300,
-            //     // autoplay: true,
-            //     // autoplaySpeed: 2000,
-            //     // arrows: false
-
-            //     dots: true,
-            //     infinite: false,
-            //     speed: 300,
-            //     slidesToShow: 4,
-            //     slidesToScroll: 4,
-            //     responsive: [
-            //         {
-            //             breakpoint: 1024,
-            //             settings: {
-            //                 slidesToShow: 3,
-            //                 slidesToScroll: 3,
-            //                 infinite: true,
-            //                 dots: true
-            //             }
-            //         },
-            //         {
-            //             breakpoint: 600,
-            //             settings: {
-            //                 slidesToShow: 2,
-            //                 slidesToScroll: 2
-            //             }
-            //         },
-            //         {
-            //             breakpoint: 480,
-            //             settings: {
-            //                 slidesToShow: 1,
-            //                 slidesToScroll: 1
-            //             }
-            //         }
-
-            //     ]
-
-
-            // });
-
-
-
 
 
         })
