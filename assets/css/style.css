@@ -373,6 +373,31 @@ body {
     color: #fff;
 }
 
+/* print  */
+.documentListContainer{
+    overflow-x: auto;
+    /* border: 2px solid rebeccapurple; */
+
+}
+#uploadListTable{
+    width: 100%!important;
+}
+.documentListLabel{
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #eceef9;
+    font-weight: 500;
+}
+.documentListItem{
+    align-items: center;
+    justify-content: space-evenly;
+}
+.documentListItem li{
+    text-align: center;
+}
+
+
+
 @media screen and (max-width : 800px) {
 
     .topbarList{

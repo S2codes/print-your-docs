@@ -16,10 +16,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- aos  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <!-- data table  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <!-- style  -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Upload your documents & get printed copies at your door step  | Print Your Docs - Siliguri</title>
+    <title>Upload your documents & get printed copies at your door step | Print Your Docs - Siliguri</title>
 </head>
 
 <body>
@@ -96,40 +97,81 @@
                 <div class="row mb-5 mt-5">
 
                     <!-- <div class="col-md-6 col-12 form-content"> -->
-                        <form action="#" method="post">
-                            <div class="row p-0">
-                                <div class="col-md-4 col-12 m-0 p-0">
-                                    <div class="mb-3">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="form-control" placeholder="Enter Your Name" name="name" id="name">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12 m-0">
-                                    <div class="mb-3">
-                                        <label for="name">Phone</label>
-                                        <input type="text" class="form-control" placeholder="Enter Your Phone Number" name="name" id="name">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12 m-0 p-0">
-                                    <div class="mb-3">
-                                        <label for="name">Name</label>
-                                        <input type="text" class="form-control" placeholder="Enter Your Name" name="name" id="name">
-                                    </div>
+                    <form action="#" method="post">
+                        <div class="row p-0">
+                            <div class="col-md-6 col-12 m-0 p-0">
+                                <div class="mb-3">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Name" name="name"
+                                        id="name">
                                 </div>
                             </div>
-                            <div class="container-fluid border mb-3" id="documentList">
-                                <div class="item">
-                                    <p class="m-0"><strong>FileName :</strong> abcd</p>
-                                    <p class="m-0">color x A4 x 3</p>
+                            <div class="col-md-6 col-12 m-0">
+                                <div class="mb-3">
+                                    <label for="name">Phone</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number"
+                                        name="name" id="name">
                                 </div>
                             </div>
-                            <div class="Upload Documents mb-5">
+                            <div class="col-md-12 col-12 m-0 p-0">
+                                <div class="mb-3">
+                                    <label for="name">Address</label>
+                                    <textarea name="addr" id="" class="form-control" cols="30" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <input type="hidden" name="id" id="uid">
+                        </div>
+                        <div class="container-fluid mb-3 documentListContainer">
+                            <!-- <ul class="list-unstyled m-0 p-0 d-flex documentListLabel py-2">
+                                <li>File Name</li>
+                                <li>Print Type</li>
+                                <li>Quantity</li>
+                                <li>Price</li>
+                            </ul> -->
 
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#uploadModal">Upload Documents <i class="bi bi-cloud-arrow-up"></i></button>
-                            </div>
+                            <table id="uploadListTable">
+                                <thead>
+                                    <td>#</td>
+                                    <td>File Name</td>
+                                    <td>Type</td>
+                                    <td>Total Page</td>
+                                    <td>No of Copies</td>
+                                    <td>Price</td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>a</td>
+                                        <td>b</td>
+                                        <td>c</td>
+                                        <td>d</td>
+                                        <td>e</td>
+                                        <td>f</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            <button class="btn btn-primary">Submit</button>
-                        </form>
+                            <div id="documentList">
+                                <!-- <ul class="list-unstyled m-0 p-0 d-flex documentListItem py-2 mb-2">
+                                    <li>File Name</li>
+                                    <li>Print Type</li>
+                                    <li>Quantity</li>
+                                    <li>Price</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <input type="hidden" name="price" id="gross_price">
+
+                        <div class="Upload Documents mb-5">
+
+                            <div class="d-flex mt-5">
+                                <button type="button" class="btn btn-warning mx-auto" data-bs-toggle="modal"
+                                    data-bs-target="#uploadModal">Upload Documents <i
+                                        class="bi bi-cloud-arrow-up"></i></button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
                     <!-- </div> -->
 
                 </div>
@@ -265,63 +307,72 @@
     <!-- modal  -->
 
     <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
     Launch demo modal
   </button> -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="uploadModalLabel">Upload Your Documents</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body py-3 px-4">
-          <form action="#" method="post" id="uploadDForm">
-            <div class="mb-3">
-                <label for="documents">Documents </label>
-                <input type="file" name="document" id="file" accept=".pdf, .jpg, .png, .docx" class="form-control">
-            </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="blackandwhite" name="flexRadioDefault" id="colorType">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Black & White
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" value="color" type="radio" name="flexRadioDefault" id="colorType" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Color
-                    </label>
-                  </div>
-            </div>
-            <div class="mb-3">
-                <label for="documents">Paper Type</label>
-                <select name="paper" id="paperType" class="form-select">
-                    <option value="normal a4">Normal A4 Paper</option>
-                    <option value="binding a4">Binding A4 Paper</option>
-                    <option value="a3">Normal A3 Paper</option>
-                    <option value="color a4">color A4 Paper</option>
-                    <option value="color binding a4">color Binding A4 Paper</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="documents">No of Copies</label>
-                <input type="number" class="form-control" id="copiesNo" name="paper" placeholder="The Number of copies wnat to print" min="1">
-            </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadModalLabel">Upload Your Documents</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-3 px-4">
+                    <form action="#" method="post" id="uploadDForm">
+                        <div class="mb-3">
+                            <label for="documents">Documents </label>
+                            <input type="file" name="document" id="file" accept=".pdf, .jpg, .png, .docx"
+                                class="form-control">
+                        </div>
+                        <div class="mb-3">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="documents">Paper Type</label>
+                            <select name="paper" id="paperType" class="form-select">
+                                <option value="a4bw">Normal A4 Paper Black & White - ₹2/page</option>
+                                <option value="a4cl">Normal A4 Paper Color - ₹8/page</option>
+                                <option value="bnda4bw">Bond A4 Paper Black & White - ₹4/page</option>
+                                <option value="phta4cl">Photo A4 color Paper - ₹25/page</option>
+                                <option value="a3bw">Normal A3 Paper Black & White - ₹5/page</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="documents">Total Pages</label>
+                            <br>
+                            <span class="para"><span class="text-danger">*</span> If you have Multi Page file then
+                                mention the Start and End Page</span>
+                            <div class="row">
+                                <div class="col-md-6 ps-0 ">
+                                    <input type="number" class="form-control" id="startpage" name="paper"
+                                        placeholder="Start page" min="1">
+                                </div>
+
+                                <div class="col-md-6 pe-0 ">
+                                    <input type="number" class="form-control" id="endpage" name="paper"
+                                        placeholder="End page" min="1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="documents">No of Copies</label>
+                            <input type="number" class="form-control" id="copiesNo" name="paper"
+                                placeholder="The Number of copies want to print" min="1">
+                        </div>
 
 
-            <button type="submit" class="btn btn-primary">Add Documents</button>
-          </form>
+                        <button type="submit" class="btn btn-primary">Add Documents</button>
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div> -->
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
 
 
 
@@ -330,10 +381,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/print.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script>
-        AOS.init({
-            // delay: 1000, 
-        });
+
+        AOS.init();
+
+
         $(document).ready(function () {
             $('.testimonialList').slick({
                 infinite: true,
@@ -341,6 +395,12 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 arrows: false
+            });
+
+            $('#uploadListTable').DataTable({
+                "bPaginate": false,
+                "bFilter": false,
+                "bInfo": false
             });
         })
     </script>
