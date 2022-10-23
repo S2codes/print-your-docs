@@ -46,27 +46,39 @@ document.getElementById('uploadDForm').addEventListener('submit', function (e) {
 
 })
 
+let gross_price = 0;
+let total_documents = 0;
+
 // append item 
 function appendFileData(data) {
     console.log(data);
     console.log(data.response);
 
     if (data.response) {
+        document.getElementsByClassName("odd")[0].style.display="none"  
 
-        document.getElementById('documentList').innerHTML += `<ul class="list-unstyled m-0 p-0 d-flex documentListItem py-2 mb-2">
-        <li>${data.file_name}</li>
-        <li>${data.paper}</li>
-        <li>${data.total_page}</li>
-        <li>${data.no_copies}</li>
-        <li>${data.price}</li>
-    </ul>`;
+        document.getElementById('documentList').innerHTML += 
+        `<tr>
+        <td>${data.file_name}</td>
+        <td>${data.paper}</td>
+        <td>${data.total_page}</td>
+        <td>${data.no_copies}</td>
+        <td>${data.price}</td>
+    </tr>`
+
+        gross_price = gross_price + data.price;
+        document.getElementById("gross_price").value = gross_price;
+
+        total_documents = total_documents + 1;
+        document.getElementById("total_documents").value = total_documents;
+       
+        document.getElementById("uploadDForm").reset();
+        let myModalEl = document.getElementById('uploadModal')
+        let modal = bootstrap.Modal.getInstance(myModalEl)
+        modal.hide();
+
 
     }
-
-    document.getElementById("uploadDForm").reset();
-    let myModalEl = document.getElementById('uploadModal')
-    let modal = bootstrap.Modal.getInstance(myModalEl)
-    modal.hide();
 
 
 }
