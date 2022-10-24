@@ -340,10 +340,10 @@
                             <label for="documents">Paper Type</label>
                             <select name="paper" id="paperType" class="form-select">
                                 <option value="a4bw">Normal A4 Paper Black & White - ₹2/page</option>
-                                <option value="a4cl">Normal A4 Paper Color - ₹8/page</option>
                                 <option value="bnda4bw">Bond A4 Paper Black & White - ₹4/page</option>
-                                <option value="phta4cl">Photo A4 color Paper - ₹25/page</option>
                                 <option value="a3bw">Normal A3 Paper Black & White - ₹5/page</option>
+                                <option value="a4cl">Normal A4 Paper Color - ₹8/page</option>
+                                <option value="phta4cl">Photo A4 color Paper - ₹25/page</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -352,12 +352,12 @@
                             <span class="para"><span class="text-danger">*</span> If you have Multi Page file then
                                 mention the Start and End Page</span>
                             <div class="row">
-                                <div class="col-md-6 ps-0 ">
+                                <div class="col-md-6 ps-0" id="startpageup">
                                     <input type="number" class="form-control" id="startpage" name="paper"
                                         placeholder="Start page" min="1">
                                 </div>
 
-                                <div class="col-md-6 pe-0 ">
+                                <div class="col-md-6 pe-0" id="endpageUp">
                                     <input type="number" class="form-control" id="endpage" name="paper"
                                         placeholder="End page" min="1">
                                 </div>

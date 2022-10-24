@@ -22,13 +22,14 @@ document.getElementById('uploadDForm').addEventListener('submit', function (e) {
     formData.append('start_page', start_page)
     formData.append('end_page', end_page)
     formData.append('number_copies', num_copies)
-    formData.append('id', id)
+    formData.append('user_id', id)
 
     console.log("form data: ");
     // console.log(formData.values());
     console.log(formData);
 
     fetch('https://signupapi2.000webhostapp.com/fileuploader/api/post.php', {
+    // fetch('http://localhost/fileuploader/api/post.php', {
         method: "POST",
         body: formData
     })
@@ -45,6 +46,8 @@ let total_documents = 0;
 
 // append item 
 function appendFileData(data) {
+    console.log("from backend");
+    console.log(data);
     
 
     if (data.response) {
