@@ -97,11 +97,15 @@
                 <!-- about us  -->
                 <div class="row mb-5 mt-5">
 
+                    <!-- <h4 class="text-center text-secondary" data-aos="fade-up">Upload & get Printed</h4>
+                    <p class="para text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi saepe, <br> libero dolore aperiam corrupti aliquam imped</p> -->
+
                     <!-- <div class="col-md-6 col-12 form-content"> -->
-                    <form action="#" method="post">
+                    <p class="m-0 text-danger"><strong>Note: </strong> Don't Reload or Back while uploading file</p>
+                    <form action="#" method="post" id="main_form">
                        
                         <!-- table  -->
-                        <div class="mb-3 documentListContainer">
+                        <div class="mb-3 documentListContainer mt-2">
 
                             <table id="uploadListTable">
                                 <thead>
@@ -115,8 +119,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <input type="hidden" name="total_documents" id="total_documents">
-                        <input type="hidden" name="price" id="gross_price">
+                       
 
                         <div class="d-flex mt-3">
                             <button type="button" class="btn btn-lg btn-warning mx-auto" data-bs-toggle="modal"
@@ -130,37 +133,41 @@
                                 <div class="mb-3">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" placeholder="Enter Your Name" name="name"
-                                        id="name" required>
+                                        id="user_name" required>
                                 </div>
                             
                                 <div class="mb-3">
                                     <label for="name">Phone</label>
                                     <input type="text" class="form-control" placeholder="Enter Your Phone Number"
-                                        name="name" id="name" required>
+                                        name="name" id="user_phone" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="name">Address</label>
-                                    <textarea name="addr" id="" class="form-control" cols="30" rows="3"
+                                    <textarea name="addr" id="user_address" class="form-control" cols="30" rows="3"
                                         required></textarea>
                                 </div>
                             </div>
+                            <input type="hidden" name="total_documents" id="total_documents">
+                            <input type="hidden" name="price" id="gross_price">
 
                             <div class="col-md-6 col-12 m-0 order-summary-content">
                                 <h5 class="text-secondary text-uppercase mt-4">Order Summary</h5>
 
                                 <ul class="list-unstyled d-flex m-0 p-0 order-Details mt-3">
                                     <li><strong>Total Documents</strong></li>
-                                    <li>3</li>
+                                    <li id="total_num_docs">0</li>
                                 </ul>
                                 <ul class="list-unstyled d-flex m-0 p-0 order-Details mt-3">
                                     <li><strong>Total Price</strong></li>
-                                    <li>₹ 23</li>
+                                    <li id="total_price_docs">₹ 0</li>
                                 </ul>
+
+                                
 
 
                                 <p class="mt-3"><span class="text-danger">Note: </span> Your Uploaded Documents Deleted in 5 Days so for any changes contact us at : <a href="tel:+91 94743 50014">+91 94743 50014</a> before deleted</p>
                                 <!-- <div class="d-flex mt-2"> -->
-                                    <button class="btn btn-lg btn-primary mt-2">Submit</button>
+                                    <button type="submit" class="btn btn-lg btn-primary mt-2" >Submit</button>
                                 <!-- </div> -->
                             </div>
 
@@ -381,8 +388,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="assets/js/print.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
 
         AOS.init();
